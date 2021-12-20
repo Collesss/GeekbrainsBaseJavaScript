@@ -1,4 +1,4 @@
-
+'use strict';
 
 let a = +prompt('Введите число a');
 let b = +prompt('Введите число b');

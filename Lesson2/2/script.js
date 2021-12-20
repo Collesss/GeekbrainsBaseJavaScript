@@ -1,3 +1,4 @@
+'use strict';
 
 let a = 1
 let x = 1 + (a *= 2);
