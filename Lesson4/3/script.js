@@ -183,53 +183,57 @@ class Game {
 }
 
 let questionsData = [
-    new QuestionData("1 Вопрос", [
-        "Первый ответ 1",
-        "Второй ответ 3",
-        "Третий ответ 3"
-    ], 0),
-    new QuestionData("2 Вопрос", [
-        "Первый ответ 1",
-        "Второй ответ 3",
-        "Третий ответ 3"
-    ], 1),
-    new QuestionData("3 Вопрос", [
-        "Первый ответ 1",
-        "Второй ответ 3",
-        "Третий ответ 3"
+    new QuestionData("Как называется яйцо, сваренное гуще, чем всмятку, но не вкрутую?", [
+        "В сумочку",
+        "В кулёчек",
+        "В мешочек",
+        "В рюкзачок"
     ], 2),
-    new QuestionData("4 Вопрос", [
-        "Первый ответ 1",
-        "Второй ответ 3",
-        "Третий ответ 3"
+    new QuestionData("Какого газа больше всего в составе атмосферы Земли?", [
+        "Кислород",
+        "Водород",
+        "Азот",
+        "Углекислый газ"
+    ], 2),
+    new QuestionData("Как называется популярный рецепт приготовления макарон с мясом?", [
+        "По-деревенски",
+        "По-флотски",
+        "По-братски",
+        "По-божески"
     ], 1),
-    new QuestionData("5 Вопрос", [
-        "Первый ответ 1",
-        "Второй ответ 3",
-        "Третий ответ 3"
+    new QuestionData("Что открыл Христофор Колумб?", [
+        "Африку",
+        "Азию",
+        "Консервы «Завтрак туриста»",
+        "Америку"
+    ], 3),
+    new QuestionData("Что потерял Ослик Иа в сказке про Винни-Пуха?", [
+        "Хвост",
+        "Память",
+        "Зубы",
+        "Совесть"
     ], 0)
 ];
 
 /**
- * Название функции говорит само за себя, она нужно для обхода исключения Illegal invocation
+ * Функция нужна для обхода исключения Illegal invocation
  * @param {String} message - сообщение передаваемое в фукнцию prompt
  * @returns {(String|null)} - значение возвращаемое функцией prompt
  */
-function fuckIllegalInvocationPrompt(message) {
+function WithoutllegalInvocationPrompt(message) {
     return prompt(message);
 }
 
 /**
- * 
- * Название функции говорит само за себя, она нужно для обхода исключения Illegal invocation
+ * Функция нужна для обхода исключения Illegal invocation
  * @param {String} message - сообщение передаваемое в фукнцию alert
  */
-function fuckIllegalInvocationAlert(message) {
+function WithoutIllegalInvocationAlert(message) {
     alert(message);
 }
 
 //let game = new Game(prompt, alert); // Illegal invocation
-let game = new Game(fuckIllegalInvocationPrompt, fuckIllegalInvocationAlert);
+let game = new Game(WithoutllegalInvocationPrompt, WithoutIllegalInvocationAlert);
 
 do {
     alert(game.run(questionsData).getMessageResult);
